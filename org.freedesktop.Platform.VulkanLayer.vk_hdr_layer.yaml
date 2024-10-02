@@ -1,0 +1,30 @@
+id: org.freedesktop.Platform.VulkanLayer.vk_hdr_layer
+branch: '23.08'
+runtime: org.freedesktop.Platform
+runtime-version: '23.08'
+sdk: org.freedesktop.Sdk
+build-extension: true
+separate-locales: false
+appstream-compose: false
+
+build-options:
+  cflags: -I/usr/lib/extensions/vulkan/vk_hdr_layer/include
+  cxxflags: -I/usr/lib/extensions/vulkan/vk_hdr_layer/include
+  ldflags: -L/usr/lib/extensions/vulkan/vk_hdr_layer/lib
+  prefix: /usr/lib/extensions/vulkan/vk_hdr_layer
+  libdir: /usr/lib/extensions/vulkan/vk_hdr_layer/lib
+  prepend-path: /usr/lib/extensions/vulkan/vk_hdr_layer/bin
+  prepend-ld-library-path: /usr/lib/extensions/vulkan/vk_hdr_layer/lib
+  prepend-pkg-config-path: /usr/lib/extensions/vulkan/vk_hdr_layer/lib/pkgconfig
+  strip: true
+
+modules:
+
+  - name: vk_hdr_layer
+    buildsystem: meson
+    sources:
+      - type: git
+        url: https://github.com/Zamundaaa/VK_hdr_layer
+        commit: e47dc6da924cd361b0082f5c27fe5e923377bb54
+    # cleanup:
+    # post-install:
