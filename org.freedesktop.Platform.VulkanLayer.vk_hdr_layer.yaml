@@ -25,6 +25,6 @@ modules:
     sources:
       - type: git
         url: https://github.com/Zamundaaa/VK_hdr_layer
-        commit: 1534ef826bfecf525a6c3154f2e3b52d640a79cf
+        commit: 1f13469feb0704bcf56b64fd6ec3793e5087d895
     # cleanup:
     # post-install:
